@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalXplore - AI Powered Local Experience</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+      }
+    }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #1f2937; /* Darker track for premium feel */
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: linear-gradient(to bottom, #8b5cf6, #ec4899); /* Indigo to Pink gradient */
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(to bottom, #7c3aed, #db2777); /* Darker gradient on hover */
+        }
+        .custom-scrollbar-itinerary::-webkit-scrollbar {
+          width: 6px;
+        }
+        .custom-scrollbar-itinerary::-webkit-scrollbar-track {
+          background: #1f2937; /* Darker track */
+          border-radius: 10px;
+        }
+        .custom-scrollbar-itinerary::-webkit-scrollbar-thumb {
+          background: linear-gradient(to bottom, #3b82f6, #6366f1); /* Blue to Indigo gradient */
+          border-radius: 10px;
+        }
+        .custom-scrollbar-itinerary::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(to bottom, #2563eb, #4f46e5); /* Darker gradient on hover */
+        }
+        .dot-pulse {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1rem; /* Adjust as needed */
+        }
+        .dot-pulse-dot {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          margin: 0 0.125rem;
+          animation: dot-pulse 1.2s cubic-bezier(0.2, 0.68, 0.18, 1.08) infinite;
+        }
+        .dot-pulse-dot:nth-child(2) {
+          animation-delay: 0.1s;
+        }
+        .dot-pulse-dot:nth-child(3) {
+          animation-delay: 0.2s;
+        }
+        @keyframes dot-pulse {
+          0%, 100% {
+            transform: scale(0.6);
+            opacity: 0.4;
+          }
+          50% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        @keyframes moveBackground {
+          from { background-position: 0 0; }
+          to { background-position: 600px 600px; }
+        }
+    </style>
+</head>
+<body class="bg-gray-950 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

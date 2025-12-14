@@ -1,0 +1,8 @@
+{
+  "name": "LocalXplore",
+  "description": "LocalXplore: Your AI-powered companion for discovering authentic global experiences, connecting with local guides, and staying informed on events worldwide.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}
