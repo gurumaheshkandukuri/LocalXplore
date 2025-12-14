@@ -22,7 +22,7 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({ onAddNotification, onBo
       id: 'fest1',
       name: 'Jazz & Blues Fest',
       description: 'A vibrant festival celebrating jazz and blues music with local and international artists. Enjoy live performances, food stalls, and a lively atmosphere.',
-      imageUrl: 'https://images.unsplash.com/photo-1514525253164-ff4ade2c2357?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      imageUrl: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=80&w=2070&auto=format&fit=crop', 
       location: 'City Park Stage',
       date: 'July 20-22, 2024',
       uri: 'https://www.neworleans.com/things-to-do/festivals/jazz-fest/'
@@ -31,7 +31,7 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({ onAddNotification, onBo
       id: 'fest2',
       name: 'Local Food Market',
       description: 'Experience local cuisine, fresh produce, and artisan goods at this bustling weekly market. Discover unique flavors and support local vendors.',
-      imageUrl: 'https://images.unsplash.com/photo-1627921319086-6351d3822165?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      imageUrl: 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?q=80&w=2070&auto=format&fit=crop', 
       location: 'Downtown Square',
       date: 'Every Saturday',
       uri: 'https://www.visitseattle.org/things-to-do/markets/pike-place-market/'
@@ -40,7 +40,7 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({ onAddNotification, onBo
       id: 'fest3',
       name: 'Summer Art Walk',
       description: 'An evening stroll showcasing local artists, galleries, and street performances. A perfect way to explore the vibrant arts scene.',
-      imageUrl: 'https://images.unsplash.com/photo-1541701494587-fcd730129a0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      imageUrl: 'https://images.unsplash.com/photo-1459908676235-d5f02a50184b?q=80&w=2070&auto=format&fit=crop', 
       location: 'Arts District',
       date: 'August 1-31, 2024',
       uri: 'https://www.denver.org/things-to-do/arts-culture/denver-art-walks/'
@@ -137,7 +137,7 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({ onAddNotification, onBo
     }
   };
 
-  const handleBookGuideClick = (place: Place) => {
+  const handleBookGuide = (place: Place) => {
     const bookingDetails: GuideBookingDetails = {
       guideName: 'Local Expert',
       activity: `${place.name} Discovery`,
@@ -273,7 +273,7 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({ onAddNotification, onBo
                     </a>
                   )}
                   <button
-                    onClick={() => handleBookGuideClick(place)}
+                    onClick={() => handleBookGuide(place)}
                     className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                     aria-label={`Book a guide for ${place.name}`}
                   >
